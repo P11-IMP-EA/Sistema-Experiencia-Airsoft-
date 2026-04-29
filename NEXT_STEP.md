@@ -25,3 +25,16 @@ Usar como URL de Supabase:
 `https://hncaeadsccxafvghqhtj.supabase.co`
 
 No usar `/rest/v1/` para inicializar el cliente JS de Supabase.
+
+-------------------------------------------------------------
+29/04/2026 16:15:00 
+
+## Estado actual
+Página /eventos lista y conectada a Supabase.
+Muestra eventos existentes.
+
+## Próximo paso
+Crear formulario para alta de eventos.
+
+## Riesgos / pendientes
+Definir campos mínimos del formulario.
