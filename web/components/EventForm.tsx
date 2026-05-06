@@ -30,7 +30,7 @@ export default function EventForm() {
     const inicio = `${fecha}T${slotData.inicio}`;
     const fin = `${fecha}T${slotData.fin}`;
 
-    // 🔴 Buscar eventos en mismo día + slot
+    // Buscar eventos en mismo día + slot
     const { data: conflictos, error: errorConflictos } = await supabase
       .from("eventos")
       .select("*")
@@ -42,7 +42,7 @@ export default function EventForm() {
       return;
     }
 
-    // 🔴 Validación de cancha (incluye AyB)
+    // Validación de cancha (incluye AyB)
     const hayConflicto = conflictos?.some((ev: any) => {
       if (cancha === "AyB") return true;
       if (ev.cancha === "AyB") return true;
@@ -57,7 +57,7 @@ export default function EventForm() {
     const codigo_privado =
       tipo === "privado" ? generarCodigo() : null;
 
-    // 🔴 Insert
+    // Insert
     const { error } = await supabase.from("eventos").insert([
       {
         titulo,
